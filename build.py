@@ -502,13 +502,26 @@ DICT_JS = r"""
   // ---- network helpers ----
   function get(url){var c=('AbortController' in window)?new AbortController():null,t=setTimeout(function(){c&&c.abort()},10000);
     return fetch(url,c?{signal:c.signal}:{}).then(function(r){clearTimeout(t);if(!r.ok){var er=new Error('http');er.status=r.status;throw er}return r.json()})}
+  // MyMemory mixes machine translation with a public, crowd-edited memory that
+  // contains junk for single words ("hello" -> "testvalue"). Prefer the
+  // machine-translation match ("created-by": "MT!") and show no extra options.
   function translate(text,pair){
+    var ck='tr2:'+pair+':'+lc(text),hit=store(ck);
+    if(hit){try{return Promise.resolve(JSON.parse(hit))}catch(e){}}
     return get('https://api.mymemory.translated.net/get?q='+encodeURIComponent(text)+'&langpair='+pair).then(function(d){
       var main=((d.responseData||{}).translatedText||'').trim();
       if(String(d.responseStatus)!=='200'||!main||/MYMEMORY WARNING|QUERY LENGTH LIMIT/i.test(main))throw new Error('quota');
-      var alts=[];(d.matches||[]).forEach(function(m){var x=String(m.translation||'').trim();
-        if(x&&x.length<60&&lc(x)!==lc(main)&&lc(x)!==lc(text)&&alts.map(lc).indexOf(lc(x))<0&&alts.length<4)alts.push(x)});
-      return {main:main,alts:alts}})}
+      // vote: every match counts, machine translation counts extra, one-off junk loses
+      var votes={},best=null;
+      function add(t,w){t=String(t||'').trim();if(!t||t.length>80)return;
+        var k=lc(t).replace(/^[¡¿"']+|[.!?"']+$/g,'');if(!k||k===lc(text))return;
+        var v=votes[k]||(votes[k]={t:t,s:0});v.s+=w;if(!best||v.s>best.s)best=v}
+      add(main,1);
+      (d.matches||[]).forEach(function(m){var q=parseFloat(m.match)||0.5,u=Math.min(parseInt(m['usage-count'],10)||0,5);
+        add(m.translation,q+u*0.1+(/^MT/i.test(String(m['created-by']||''))?1.5:0))});
+      if(best)main=best.t;
+      var t=document.createElement('textarea');t.innerHTML=main;main=t.value;
+      var r={main:main,alts:[]};store(ck,JSON.stringify(r));return r})}
 
   // ---- speech ----
   var voice=null;
@@ -585,9 +598,6 @@ DICT_JS = r"""
       if(x.es){$('d-es').innerHTML='<div class="des-main">'+esc(x.es)+'</div>'+
           (x.esAlts&&x.esAlts.length?'<div class="des-alt">Other English options: '+x.esAlts.map(function(a){
             return '<button type="button" class="dchip" data-look="'+esc(a)+'">'+esc(a)+'</button>'}).join(' ')+'</div>':'')}
-      else translate(en,'en|es').then(function(r){if(my!==seq)return;
-          $('d-es').innerHTML='<div class="des-main">'+esc(r.main)+'</div>'+(r.alts.length?'<div class="des-alt">Also: '+r.alts.map(esc).join(' · ')+'</div>':'')})
-        .catch(function(){if(my!==seq)return;$('d-es').innerHTML='<span class="dnote">Spanish translation unavailable right now (the free service allows about 5,000 characters a day). Try the links below.</span>'});
 
       // phrase list
       var mine=fromList(en);$('d-list-s').style.display='none';
@@ -598,6 +608,30 @@ DICT_JS = r"""
           if(d&&d.length)return {kind:'syn',w:d};
           return get('https://api.datamuse.com/words?ml='+encodeURIComponent(en.toLowerCase())+'&max=10').then(function(r){return {kind:'rel',w:r||[]}})})
         .catch(function(){return {kind:'syn',w:[]}});
+
+      // Spanish: a single word alone gets bad translations ("run" -> "demanda"),
+      // so translate it in context for each part of speech: "to run", "the run"...
+      var NOTR='<span class="dnote">Spanish translation unavailable right now (the free service allows about 5,000 characters a day). Try the links below.</span>';
+      function cleanEs(t,pos){t=String(t).trim().replace(/[.!]+$/,'');
+        if(pos==='verb')t=t.replace(/^(para|a)\s+/i,'');
+        return t}
+      if(!x.es)dictP.then(function(d){
+        if(my!==seq)return;
+        var pos=[];(Array.isArray(d)?d:[]).forEach(function(e1){(e1.meanings||[]).forEach(function(m){
+          if(m.partOfSpeech&&pos.indexOf(m.partOfSpeech)<0)pos.push(m.partOfSpeech)})});
+        var w=en.toLowerCase();
+        if(en.indexOf(' ')>-1||!pos.length){
+          return translate(en,'en|es').then(function(r){if(my!==seq)return;
+            $('d-es').innerHTML='<div class="des-main">'+esc(cleanEs(r.main))+'</div>'+(r.alts.length?'<div class="des-alt">Also: '+r.alts.map(esc).join(' · ')+'</div>':'')})}
+        var rows=[translate(en,'en|es').then(function(r){return {k:'',t:cleanEs(r.main)}})];
+        if(pos.indexOf('verb')>-1&&pos.indexOf('noun')>-1){
+          rows.push(translate('to '+w,'en|es').then(function(r){return {k:'verb',t:cleanEs(r.main,'verb')}}).catch(function(){return null}));
+          rows.push(translate('the '+w,'en|es').then(function(r){return {k:'noun',t:cleanEs(r.main)}}).catch(function(){return null}))}
+        return Promise.all(rows).then(function(rs){if(my!==seq)return;
+          var main=rs[0],extra=rs.slice(1).filter(Boolean);
+          $('d-es').innerHTML='<div class="des-main">'+esc(main.t)+'</div>'+
+            (extra.length?'<div class="des-alt">'+extra.map(function(r){return '<b>as a '+esc(r.k)+':</b> '+esc(r.t)}).join(' · ')+'</div>':'')})
+      }).catch(function(){if(my!==seq)return;$('d-es').innerHTML=NOTR});
 
       Promise.all([dictP,synP]).then(function(res){
         if(my!==seq)return;
@@ -614,8 +648,10 @@ DICT_JS = r"""
         var groups={},order=[];
         entries.forEach(function(e1){(e1.meanings||[]).forEach(function(m){
           var k=m.partOfSpeech||'';if(!groups[k]){groups[k]=[];order.push(k)}
-          (m.definitions||[]).forEach(function(d){groups[k].push(d.definition);if(d.example)exs.push(d.example);(d.synonyms||[]).forEach(function(s){dsyn.push(s)})});
+          (m.definitions||[]).forEach(function(d){var dn=lc(d.definition).replace(/[.!]+$/,'');
+            if(dn!==lc(en)&&dn!=='to '+lc(en)&&dn!=='a '+lc(en))groups[k].push(d.definition);if(d.example)exs.push(d.example);(d.synonyms||[]).forEach(function(s){dsyn.push(s)})});
           (m.synonyms||[]).forEach(function(s){dsyn.push(s)})})});
+        order=order.filter(function(k){return groups[k].length});
         if(order.length){
           $('d-def').innerHTML=order.slice(0,4).map(function(k){return '<div class="dpos">'+esc(k)+'</div><ol class="ddefs">'+
             groups[k].slice(0,3).map(function(d){return '<li>'+esc(d)+'</li>'}).join('')+'</ol>'}).join('');
@@ -638,8 +674,10 @@ DICT_JS = r"""
   }
 
   // open from a link like ...#dict=deadline
-  if(location.hash.indexOf('#dict=')===0){var t=decodeURIComponent(location.hash.slice(6));if(t)setTimeout(function(){setDir('en');open(t)},0)}
-  else if(location.hash==='#dict')setTimeout(function(){open()},0);
+  function fromHash(){var h=location.hash;
+    if(h.indexOf('#dict=')===0){var t=decodeURIComponent(h.slice(6));if(t&&lc(t)!==lc(inp.value)){setDir('en');open(t)}else if(t)open()}
+    else if(h==='#dict')open()}
+  setTimeout(fromHash,0);addEventListener('hashchange',fromHash);
 })();
 """
 
