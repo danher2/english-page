@@ -129,13 +129,68 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:0 20px 40px}
   .btn .lbl{display:none}
 }
 @media print{.toolbar,nav.toc,#top,.say{display:none!important}.layout{display:block}.hero{color:#000;background:none}}
+
+.dict{position:fixed;inset:0;z-index:60;background:rgba(10,12,20,.55);display:none;align-items:flex-start;justify-content:center;padding:5vh 16px 16px}
+.dict.open{display:flex}
+body.dict-open{overflow:hidden}
+.dict-box{width:min(780px,100%);max-height:90vh;display:flex;flex-direction:column;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 20px 60px rgba(0,0,0,.35);overflow:hidden}
+.dict-top{padding:14px 14px 10px;border-bottom:1px solid var(--line);background:var(--surface)}
+.dict-title{display:flex;align-items:center;gap:10px;margin:0 2px 10px}
+.dict-title h2{margin:0;font-size:18px;flex:1;display:flex;align-items:center;gap:8px}
+.dict-title h2 svg{width:20px;height:20px;fill:var(--accent)}
+.dform{display:flex;gap:8px;flex-wrap:wrap}
+.dform .search{flex:1 1 220px}
+#ddir{min-width:96px;justify-content:center}
+.dhist{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px;align-items:center}
+.dhist:empty{display:none}
+.dhist .lab{font-size:12px;color:var(--muted);margin-right:2px}
+.dchip{font:inherit;font-size:13px;border:1px solid var(--line);background:var(--surface-2);color:var(--fg);padding:3px 10px;border-radius:999px;cursor:pointer}
+.dchip:hover{border-color:var(--accent);color:var(--accent)}
+.dout{overflow:auto;padding:18px 20px 26px;flex:1}
+.dempty{color:var(--muted);text-align:center;padding:26px 10px}
+.dempty p{margin:6px 0}
+.dload{color:var(--muted);padding:6px 0}
+.dhead{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.dword{margin:0;font-size:30px;letter-spacing:-.01em;line-height:1.15}
+.dfrom{font-size:13px;color:var(--muted);margin-top:2px}
+.dphon{color:var(--muted);font-size:16px;margin-top:4px;font-family:"Lucida Sans Unicode","Segoe UI",Arial,sans-serif}
+.daudio{display:flex;gap:6px;flex-wrap:wrap}
+.dplay{font:inherit;font-size:13px;font-weight:600;display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--surface-2);color:var(--fg);padding:6px 11px;border-radius:999px;cursor:pointer}
+.dplay svg{width:15px;height:15px;fill:currentColor}
+.dplay:hover,.dplay.on{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.dsec{margin-top:18px}
+.dsec h4{margin:0 0 8px;font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.des-main{font-size:22px;font-weight:650;color:var(--es)}
+.des-alt{margin-top:4px;color:var(--muted);font-size:14px}
+.dpos{margin:10px 0 4px;font-size:13px;font-weight:700;color:var(--accent);font-style:italic}
+.ddefs{margin:0;padding-left:22px}
+.ddefs li{margin:5px 0}
+.dsyns{display:flex;gap:6px;flex-wrap:wrap}
+.dsyns .dchip{background:var(--accent-soft);border-color:transparent;color:var(--accent);font-weight:600}
+.dex{list-style:none;margin:0;padding:0}
+.dex li{display:flex;gap:8px;align-items:flex-start;padding:9px 12px;border-radius:10px;background:var(--surface-2);margin-bottom:6px}
+.dex .txt{flex:1}
+.dex .tr{display:block;color:var(--es);font-size:14px;margin-top:3px}
+.dex .src{display:block;color:var(--muted);font-size:12px;margin-top:2px}
+.dsay,.dtr{flex:none;border:0;background:transparent;color:var(--muted);cursor:pointer;height:28px;min-width:28px;border-radius:8px;display:grid;place-items:center;font:inherit;font-size:12px;font-weight:600}
+.dsay svg{width:17px;height:17px;fill:currentColor}
+.dsay:hover,.dsay.on,.dtr:hover{color:var(--accent);background:var(--accent-soft)}
+.dnote{color:var(--muted);font-size:14px}
+.dlinks{margin-top:22px;padding-top:14px;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.dlinks a{margin-right:12px}
+@media (max-width:640px){
+  .dict{padding:0}
+  .dict-box{max-height:none;height:100%;height:100dvh;border-radius:0;border:0}
+  .dword{font-size:26px}
+  .dform .btn{flex:1 1 0;justify-content:center}
+}
 </style>
 </head>
 <body>
 <header class="hero"><div class="hero-in">
 <span class="eyebrow">English chunking</span>
 <h1>English Phrases in Chunks — Work &amp; Life</h1>
-<p>Learn whole phrases, not single words. Use the search, listen to each phrase, and hide a language to test yourself.</p>
+<p>Learn whole phrases, not single words. Use the search, listen to each phrase, hide a language to test yourself, and look up any word in the Dictionary.</p>
 
 <div class="stats">
 <div class="stat"><b>606</b>phrases</div>
@@ -146,6 +201,7 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:0 20px 40px}
 
 <div class="toolbar"><div class="toolbar-in">
 <button class="btn icon" id="toc-btn" type="button" aria-label="Contents"><svg viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg><span class="lbl">Contents</span></button>
+<button class="btn" id="dict-btn" type="button" title="Dictionary (d)"><svg viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v11.2c.3-.1.6-.2 1-.2h12V4H6zm0 14a1 1 0 0 0 0 2h12v-2H6zm2-12h8v2H8V6zm0 4h6v2H8v-2z"/></svg><span>Dictionary</span></button>
 <label class="search"><svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/></svg><input id="q" type="search" placeholder="Search phrases…" autocomplete="off"></label>
 <button class="btn" id="hide-en" type="button" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7zm0 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg><span>Hide English</span></button>
 <button class="btn" id="hide-es" type="button" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M12 5c5 0 9 4.5 10 7-1 2.5-5 7-10 7S3 14.5 2 12c1-2.5 5-7 10-7zm0 3a4 4 0 1 0 0 8 4 4 0 0 0 0-8z"/></svg><span>Hide Spanish</span></button>
@@ -161,7 +217,22 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:0 20px 40px}
 <div class="empty" id="empty">No phrases match your search.</div>
 </main>
 </div>
-<footer>Updated: November 18, 2026 · Tap a hidden phrase to reveal it · Tap the speaker to hear it</footer>
+<footer>Updated: November 18, 2026 · Tap a hidden phrase to reveal it · Tap the speaker to hear it<br>Dictionary data: Free Dictionary API, Datamuse and MyMemory</footer>
+<div class="dict" id="dict" role="dialog" aria-modal="true" aria-labelledby="dict-h">
+<div class="dict-box">
+<div class="dict-top">
+<div class="dict-title"><h2 id="dict-h"><svg viewBox="0 0 24 24"><path d="M6 2h12a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H6a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3zm0 2a1 1 0 0 0-1 1v11.2c.3-.1.6-.2 1-.2h12V4H6zm0 14a1 1 0 0 0 0 2h12v-2H6zm2-12h8v2H8V6zm0 4h6v2H8v-2z"/></svg>Dictionary</h2>
+<button class="btn icon" id="dclose" type="button" aria-label="Close dictionary" title="Close (Esc)"><svg viewBox="0 0 24 24"><path d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4z"/></svg></button></div>
+<form class="dform" id="dform" autocomplete="off">
+<label class="search"><svg viewBox="0 0 24 24"><path d="M10 2a8 8 0 0 1 6.3 12.9l5.4 5.4-1.4 1.4-5.4-5.4A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/></svg><input id="dq" type="search" enterkeyhint="search" autocapitalize="off" spellcheck="false" placeholder="Type an English word or phrase…"></label>
+<button class="btn" id="ddir" type="button">EN → ES</button>
+<button class="btn" type="submit" aria-pressed="true">Search</button>
+</form>
+<div class="dhist" id="dhist"></div>
+</div>
+<div class="dout" id="dout"></div>
+</div>
+</div>
 <button id="top" type="button" aria-label="Back to top"><svg viewBox="0 0 24 24"><path d="M12 5l7 7-1.4 1.4L13 8.8V20h-2V8.8l-4.6 4.6L5 12z"/></svg></button>
 <script>
 (function(){
@@ -252,6 +323,200 @@ footer{text-align:center;color:var(--muted);font-size:13px;padding:0 20px 40px}
   var top=document.getElementById('top');
   addEventListener('scroll',function(){top.classList.toggle('on',scrollY>600)},{passive:true});
   top.onclick=function(){scrollTo({top:0,behavior:'smooth'})};
+})();
+</script>
+<script>
+(function(){
+  var dlg=document.getElementById('dict'),inp=document.getElementById('dq'),out=document.getElementById('dout'),
+      form=document.getElementById('dform'),dirBtn=document.getElementById('ddir'),histEl=document.getElementById('dhist');
+  var SPK='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4zm12.5 3a4.5 4.5 0 0 0-2.5-4v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>';
+  function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+  function lc(s){return String(s).toLowerCase().trim()}
+  function store(k,v){try{if(v===undefined)return localStorage.getItem(k);localStorage.setItem(k,v)}catch(e){return null}}
+
+  // ---- direction EN->ES / ES->EN ----
+  var dir=store('dictDir')||'en';
+  function setDir(d){dir=d;store('dictDir',d);dirBtn.textContent=d==='en'?'EN → ES':'ES → EN';
+    dirBtn.title=d==='en'?'Searching an English word':'Searching a Spanish word';
+    inp.placeholder=d==='en'?'Type an English word or phrase…':'Type a Spanish word (e.g. presupuesto)…'}
+  setDir(dir);
+  dirBtn.onclick=function(){setDir(dir==='en'?'es':'en');inp.focus()};
+
+  // ---- open / close ----
+  function open(term){dlg.classList.add('open');document.body.classList.add('dict-open');renderHist();
+    if(term){inp.value=term;lookup(term)}else if(!out.dataset.used)empty();
+    setTimeout(function(){inp.focus();inp.select()},60)}
+  function close(){dlg.classList.remove('open');document.body.classList.remove('dict-open');
+    if(location.hash.indexOf('#dict')===0)history.replaceState(null,'',location.pathname+location.search);
+    try{speechSynthesis.cancel()}catch(e){}}
+  document.getElementById('dict-btn').onclick=function(){open()};
+  document.getElementById('dclose').onclick=close;
+  dlg.addEventListener('click',function(e){if(e.target===dlg)close()});
+  document.addEventListener('keydown',function(e){
+    if(dlg.classList.contains('open')){e.stopPropagation();if(e.key==='Escape')close();return}
+    var tag=(document.activeElement||{}).tagName;
+    if(e.key==='d'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&tag!=='INPUT'&&tag!=='TEXTAREA'){e.preventDefault();open()}
+  },true);
+  // double-click any word on the page to look it up
+  document.querySelector('main').addEventListener('dblclick',function(){
+    var s=String(window.getSelection()||'').trim().replace(/[^\w' -]+$/,'').replace(/^[^\w']+/,'');
+    if(s&&s.length<40){if(dir!=='en')setDir('en');open(s)}});
+  form.onsubmit=function(e){e.preventDefault();var t=inp.value.trim();if(t)lookup(t)};
+
+  // ---- history ----
+  function getHist(){try{return JSON.parse(store('dictHist')||'[]')}catch(e){return []}}
+  function addHist(t){var h=getHist().filter(function(x){return lc(x)!==lc(t)});h.unshift(t);store('dictHist',JSON.stringify(h.slice(0,12)));renderHist()}
+  function renderHist(){var h=getHist();histEl.innerHTML=h.length?'<span class="lab">Recent:</span>'+h.map(function(x){
+    return '<button type="button" class="dchip" data-look="'+esc(x)+'">'+esc(x)+'</button>'}).join(''):''}
+  histEl.addEventListener('click',function(e){var b=e.target.closest('[data-look]');if(b){if(dir!=='en')setDir('en');inp.value=b.dataset.look;lookup(b.dataset.look)}});
+
+  function empty(){out.innerHTML='<div class="dempty"><p><b>Look up any English word or phrase.</b></p>'+
+    '<p>You get the Spanish meaning, an English explanation, synonyms, examples and pronunciation.</p>'+
+    '<p style="margin-top:14px">Try: '+['deadline','bandwidth','take over','reliable','follow up'].map(function(w){
+      return '<button type="button" class="dchip" data-look="'+w+'">'+w+'</button>'}).join(' ')+'</p>'+
+    '<p style="margin-top:14px;font-size:13px">Tip: press <b>d</b> to open the dictionary, or double-click a word on the page (on a computer).</p></div>'}
+
+  // ---- network helpers ----
+  function get(url){var c=('AbortController' in window)?new AbortController():null,t=setTimeout(function(){c&&c.abort()},10000);
+    return fetch(url,c?{signal:c.signal}:{}).then(function(r){clearTimeout(t);if(!r.ok){var er=new Error('http');er.status=r.status;throw er}return r.json()})}
+  function translate(text,pair){
+    return get('https://api.mymemory.translated.net/get?q='+encodeURIComponent(text)+'&langpair='+pair).then(function(d){
+      var main=((d.responseData||{}).translatedText||'').trim();
+      if(String(d.responseStatus)!=='200'||!main||/MYMEMORY WARNING|QUERY LENGTH LIMIT/i.test(main))throw new Error('quota');
+      var alts=[];(d.matches||[]).forEach(function(m){var x=String(m.translation||'').trim();
+        if(x&&x.length<60&&lc(x)!==lc(main)&&lc(x)!==lc(text)&&alts.map(lc).indexOf(lc(x))<0&&alts.length<4)alts.push(x)});
+      return {main:main,alts:alts}})}
+
+  // ---- speech ----
+  var voice=null;
+  function pick(){try{var v=speechSynthesis.getVoices().filter(function(x){return /^en[-_]US/i.test(x.lang)});
+    voice=v.find(function(x){return /natural|google|samantha|aria|jenny/i.test(x.name)})||v[0]||null}catch(e){}}
+  if('speechSynthesis' in window){pick();speechSynthesis.addEventListener&&speechSynthesis.addEventListener('voiceschanged',pick)}
+  var audio=null;
+  function say(text,rate,btn){
+    if(audio){audio.pause();audio=null}
+    if(!('speechSynthesis' in window))return;
+    speechSynthesis.cancel();var u=new SpeechSynthesisUtterance(String(text).replace(/_{3,}/g,'something'));u.lang='en-US';u.rate=rate||.92;if(voice)u.voice=voice;
+    if(btn){btn.classList.add('on');u.onend=u.onerror=function(){btn.classList.remove('on')}}
+    speechSynthesis.speak(u)}
+  function playUrl(url,btn){try{speechSynthesis.cancel()}catch(e){}if(audio)audio.pause();
+    audio=new Audio(url);btn.classList.add('on');audio.onended=audio.onerror=function(){btn.classList.remove('on')};
+    audio.play().catch(function(){btn.classList.remove('on')})}
+
+  out.addEventListener('click',function(e){
+    var b=e.target.closest('button');if(!b)return;
+    if(b.dataset.say!=null)say(b.dataset.say,parseFloat(b.dataset.rate||'.92'),b);
+    else if(b.dataset.url)playUrl(b.dataset.url,b);
+    else if(b.dataset.look){if(dir!=='en')setDir('en');inp.value=b.dataset.look;lookup(b.dataset.look);out.scrollTop=0}
+    else if(b.dataset.tr!=null){var li=b.closest('li'),slot=li.querySelector('.tr');b.disabled=true;b.textContent='…';
+      translate(b.dataset.tr,'en|es').then(function(r){slot.textContent=r.main;b.remove()})
+        .catch(function(){b.textContent='ES';b.disabled=false;slot.textContent='Translation limit reached for today.'})}
+  });
+
+  // ---- phrases from this page that contain the word ----
+  function fromList(term){
+    var re;try{re=new RegExp('(^|[^a-z])'+term.toLowerCase().replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'([^a-z]|$)','i')}catch(e){return []}
+    var seen={},res=[];
+    document.querySelectorAll('main .en[data-say]').forEach(function(el){
+      var t=el.dataset.say;if(seen[t]||!re.test(t))return;seen[t]=1;
+      var box=el.closest('.phrase,.half'),es=box&&box.querySelector('.es');
+      res.push({en:t,es:es?es.textContent.trim():''})});
+    return res.slice(0,8)}
+
+  function exItem(text,es,src,canTr){
+    return '<li><button type="button" class="dsay" data-say="'+esc(text)+'" aria-label="Listen" title="Listen">'+SPK+'</button>'+
+      '<span class="txt">'+esc(text)+'<span class="tr">'+esc(es||'')+'</span>'+(src?'<span class="src">'+esc(src)+'</span>':'')+'</span>'+
+      (canTr?'<button type="button" class="dtr" data-tr="'+esc(text)+'" title="Translate to Spanish">ES</button>':'')+'</li>'}
+
+  // ---- main lookup ----
+  var seq=0;
+  function lookup(raw){
+    var my=++seq,term=raw.trim().replace(/\s+/g,' ');if(!term)return;
+    out.dataset.used='1';
+    out.innerHTML='<div class="dload">Looking up “'+esc(term)+'”…</div>';
+    var start=dir==='es'
+      ?translate(term,'es|en').then(function(r){return {en:r.main.replace(/[.!]+$/,''),es:term,esAlts:r.alts}})
+      :Promise.resolve({en:term});
+    start.then(function(x){
+      if(my!==seq)return;
+      var en=x.en;addHist(en);
+      history.replaceState(null,'','#dict='+encodeURIComponent(en));
+      out.innerHTML=
+        '<div class="dhead"><div><h3 class="dword">'+esc(en)+'</h3>'+
+          (x.es?'<div class="dfrom">from Spanish: “'+esc(x.es)+'”</div>':'')+
+          '<div class="dphon" id="d-phon"></div></div>'+
+          '<div class="daudio"><button type="button" class="dplay" data-say="'+esc(en)+'" data-rate="0.92">'+SPK+'Listen</button>'+
+          '<button type="button" class="dplay" data-say="'+esc(en)+'" data-rate="0.6">'+SPK+'Slow</button><span id="d-native" class="daudio"></span></div></div>'+
+        '<section class="dsec"><h4>Spanish</h4><div id="d-es"><span class="dload">Translating…</span></div></section>'+
+        '<section class="dsec"><h4>Meaning in English</h4><div id="d-def"><span class="dload">Loading…</span></div></section>'+
+        '<section class="dsec"><h4 id="d-syn-h">Synonyms</h4><div id="d-syn" class="dsyns"><span class="dload">Loading…</span></div></section>'+
+        '<section class="dsec"><h4>Examples</h4><ul id="d-ex" class="dex"><li class="dload" style="background:none">Loading…</li></ul></section>'+
+        '<section class="dsec" id="d-list-s"><h4>In your phrase list</h4><ul id="d-list" class="dex"></ul></section>'+
+        '<div class="dlinks">See more: '+
+          '<a target="_blank" rel="noopener" href="https://dictionary.cambridge.org/dictionary/english-spanish/'+encodeURIComponent(en.toLowerCase().replace(/ /g,'-'))+'">Cambridge</a>'+
+          '<a target="_blank" rel="noopener" href="https://www.wordreference.com/es/translation.asp?tranword='+encodeURIComponent(en)+'">WordReference</a>'+
+          '<a target="_blank" rel="noopener" href="https://youglish.com/pronounce/'+encodeURIComponent(en)+'/english/us">YouGlish (hear it in real videos)</a></div>';
+      var $=function(id){return document.getElementById(id)};
+
+      // Spanish
+      if(x.es){$('d-es').innerHTML='<div class="des-main">'+esc(x.es)+'</div>'+
+          (x.esAlts&&x.esAlts.length?'<div class="des-alt">Other English options: '+x.esAlts.map(function(a){
+            return '<button type="button" class="dchip" data-look="'+esc(a)+'">'+esc(a)+'</button>'}).join(' ')+'</div>':'')}
+      else translate(en,'en|es').then(function(r){if(my!==seq)return;
+          $('d-es').innerHTML='<div class="des-main">'+esc(r.main)+'</div>'+(r.alts.length?'<div class="des-alt">Also: '+r.alts.map(esc).join(' · ')+'</div>':'')})
+        .catch(function(){if(my!==seq)return;$('d-es').innerHTML='<span class="dnote">Spanish translation unavailable right now (the free service allows about 5,000 characters a day). Try the links below.</span>'});
+
+      // phrase list
+      var mine=fromList(en);$('d-list-s').style.display='none';
+
+      // dictionary + synonyms
+      var dictP=get('https://api.dictionaryapi.dev/api/v2/entries/en/'+encodeURIComponent(en.toLowerCase())).catch(function(e){return null});
+      var synP=get('https://api.datamuse.com/words?rel_syn='+encodeURIComponent(en.toLowerCase())+'&max=14').then(function(d){
+          if(d&&d.length)return {kind:'syn',w:d};
+          return get('https://api.datamuse.com/words?ml='+encodeURIComponent(en.toLowerCase())+'&max=10').then(function(r){return {kind:'rel',w:r||[]}})})
+        .catch(function(){return {kind:'syn',w:[]}});
+
+      Promise.all([dictP,synP]).then(function(res){
+        if(my!==seq)return;
+        var entries=Array.isArray(res[0])?res[0]:[],syn=res[1],exs=[],dsyn=[];
+        // phonetics + native audio
+        var phon='',aud=[];
+        entries.forEach(function(en1){if(!phon&&en1.phonetic)phon=en1.phonetic;
+          (en1.phonetics||[]).forEach(function(p){if(!phon&&p.text)phon=p.text;
+            if(p.audio){var u=p.audio.indexOf('//')===0?'https:'+p.audio:p.audio,m=u.match(/-(us|uk|au|ca)\.mp3/i),
+              lab=m?m[1].toUpperCase():'Audio';if(!aud.some(function(a){return a.lab===lab}))aud.push({u:u,lab:lab})}})});
+        $('d-phon').textContent=phon;
+        $('d-native').innerHTML=aud.slice(0,2).map(function(a){return '<button type="button" class="dplay" data-url="'+esc(a.u)+'" title="Real recording">'+SPK+esc(a.lab)+'</button>'}).join('');
+        // definitions grouped by part of speech
+        var groups={},order=[];
+        entries.forEach(function(e1){(e1.meanings||[]).forEach(function(m){
+          var k=m.partOfSpeech||'';if(!groups[k]){groups[k]=[];order.push(k)}
+          (m.definitions||[]).forEach(function(d){groups[k].push(d.definition);if(d.example)exs.push(d.example);(d.synonyms||[]).forEach(function(s){dsyn.push(s)})});
+          (m.synonyms||[]).forEach(function(s){dsyn.push(s)})})});
+        if(order.length){
+          $('d-def').innerHTML=order.slice(0,4).map(function(k){return '<div class="dpos">'+esc(k)+'</div><ol class="ddefs">'+
+            groups[k].slice(0,3).map(function(d){return '<li>'+esc(d)+'</li>'}).join('')+'</ol>'}).join('');
+        }else{
+          $('d-def').innerHTML='<span class="dnote">No dictionary entry found'+(en.indexOf(' ')>-1?' for this phrase (the free dictionary mostly covers single words)':'')+'. Check the Spanish meaning, your phrase list and the links below.</span>'}
+        // synonyms: dictionary first, then Datamuse
+        var all=[],seen={};dsyn.concat(syn.w.map(function(w){return w.word})).forEach(function(s){var k=lc(s);if(k&&!seen[k]&&k!==lc(en)){seen[k]=1;all.push(s)}});
+        if(syn.kind==='rel'&&!dsyn.length)$('d-syn-h').textContent='Related words';
+        $('d-syn').innerHTML=all.length?all.slice(0,14).map(function(s){return '<button type="button" class="dchip" data-look="'+esc(s)+'" title="Look up">'+esc(s)+'</button>'}).join(''):'<span class="dnote">No synonyms found.</span>';
+        // examples: dictionary examples, then phrases from your list
+        var exHtml=exs.slice(0,6).map(function(t){return exItem(t,'','',true)});
+        var used=exHtml.length<3?Math.min(mine.length,3-exHtml.length):0;
+        mine.slice(0,used).forEach(function(m){exHtml.push(exItem(m.en,m.es,'From your phrase list',false))});
+        var rest=mine.slice(used);
+        if(rest.length){$('d-list').innerHTML=rest.map(function(m){return exItem(m.en,m.es,'',false)}).join('');$('d-list-s').style.display=''}
+        $('d-ex').innerHTML=exHtml.length?exHtml.join(''):'<li class="dnote" style="background:none;padding-left:0">No examples found. Try YouGlish below to hear it used in real videos.</li>';
+      });
+    }).catch(function(){if(my!==seq)return;
+      out.innerHTML='<div class="dempty"><p>Couldn’t translate “'+esc(term)+'” to English right now.</p><p>Check your connection, or switch to <b>EN → ES</b> and type the English word.</p></div>'});
+  }
+
+  // open from a link like ...#dict=deadline
+  if(location.hash.indexOf('#dict=')===0){var t=decodeURIComponent(location.hash.slice(6));if(t)setTimeout(function(){setDir('en');open(t)},0)}
+  else if(location.hash==='#dict')setTimeout(function(){open()},0);
 })();
 </script>
 </body>
