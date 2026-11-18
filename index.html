@@ -380,25 +380,36 @@ body.dict-open{overflow:hidden}
   function get(url){var c=('AbortController' in window)?new AbortController():null,t=setTimeout(function(){c&&c.abort()},10000);
     return fetch(url,c?{signal:c.signal}:{}).then(function(r){clearTimeout(t);if(!r.ok){var er=new Error('http');er.status=r.status;throw er}return r.json()})}
   // MyMemory mixes machine translation with a public, crowd-edited memory that
-  // contains junk for single words ("hello" -> "testvalue"). Prefer the
-  // machine-translation match ("created-by": "MT!") and show no extra options.
-  function translate(text,pair){
-    var ck='tr2:'+pair+':'+lc(text),hit=store(ck);
+  // contains junk, especially for single words ("hello" -> "testvalue",
+  // "run" -> "demanda, pánico bancario"). fetchTr() keeps every candidate with
+  // a weight; translate() picks the best one for a phrase, and single words are
+  // cross-checked across several queries in lookup() below.
+  function unent(s){var t=document.createElement('textarea');t.innerHTML=String(s||'');return t.value}
+  function fetchTr(text,pair){
+    var ck='tr3:'+pair+':'+lc(text),hit=store(ck);
     if(hit){try{return Promise.resolve(JSON.parse(hit))}catch(e){}}
     return get('https://api.mymemory.translated.net/get?q='+encodeURIComponent(text)+'&langpair='+pair).then(function(d){
-      var main=((d.responseData||{}).translatedText||'').trim();
+      var main=unent((d.responseData||{}).translatedText).trim();
       if(String(d.responseStatus)!=='200'||!main||/MYMEMORY WARNING|QUERY LENGTH LIMIT/i.test(main))throw new Error('quota');
-      // vote: every match counts, machine translation counts extra, one-off junk loses
+      var cands=[],inMatches=false;
+      (d.matches||[]).forEach(function(m){var t=unent(m.translation).trim();if(!t)return;
+        if(lc(t)===lc(main))inMatches=true;
+        var q=parseFloat(m.match)||0.5,u=Math.min(parseInt(m['usage-count'],10)||0,5);
+        cands.push({t:t,w:q+u*0.1+(/^MT/i.test(String(m['created-by']||''))?1.5:0)})});
+      // the headline answer is usually just the top match; only count it on its own if it isn't one
+      if(!inMatches)cands.unshift({t:main,w:1});
+      var r={main:main,cands:cands};store(ck,JSON.stringify(r));return r})}
+  // normalize a candidate: drop punctuation, and the leading article or "para" that the context query added
+  function esKey(t,strip){t=lc(t).replace(/^[\s¡¿"'(]+|[\s.!?,;:"')]+$/g,'').replace(/\s+/g,' ');
+    if(strip==='noun')t=t.replace(/^(el|la|los|las|lo|un|una)\s+/,'');
+    if(strip==='verb')t=t.replace(/^(para|a)\s+/,'');
+    return t}
+  function translate(text,pair){
+    return fetchTr(text,pair).then(function(r){
       var votes={},best=null;
-      function add(t,w){t=String(t||'').trim();if(!t||t.length>80)return;
-        var k=lc(t).replace(/^[¡¿"']+|[.!?"']+$/g,'');if(!k||k===lc(text))return;
-        var v=votes[k]||(votes[k]={t:t,s:0});v.s+=w;if(!best||v.s>best.s)best=v}
-      add(main,1);
-      (d.matches||[]).forEach(function(m){var q=parseFloat(m.match)||0.5,u=Math.min(parseInt(m['usage-count'],10)||0,5);
-        add(m.translation,q+u*0.1+(/^MT/i.test(String(m['created-by']||''))?1.5:0))});
-      if(best)main=best.t;
-      var t=document.createElement('textarea');t.innerHTML=main;main=t.value;
-      var r={main:main,alts:[]};store(ck,JSON.stringify(r));return r})}
+      r.cands.forEach(function(c){var k=esKey(c.t);if(!k||k===lc(text)||c.t.length>120)return;
+        var v=votes[k]||(votes[k]={t:c.t,s:0});v.s+=c.w;if(!best||v.s>best.s)best=v});
+      return {main:best?best.t:r.main,alts:[]}})}
 
   // ---- speech ----
   var voice=null;
@@ -499,16 +510,47 @@ body.dict-open{overflow:hidden}
         var w=en.toLowerCase();
         if(en.indexOf(' ')>-1||!pos.length){
           return translate(en,'en|es').then(function(r){if(my!==seq)return;
-            $('d-es').innerHTML='<div class="des-main">'+esc(cleanEs(r.main))+'</div>'+(r.alts.length?'<div class="des-alt">Also: '+r.alts.map(esc).join(' · ')+'</div>':'')})}
-        var rows=[translate(en,'en|es').then(function(r){return {k:'',t:cleanEs(r.main)}})];
-        if(pos.indexOf('verb')>-1&&pos.indexOf('noun')>-1){
-          rows.push(translate('to '+w,'en|es').then(function(r){return {k:'verb',t:cleanEs(r.main,'verb')}}).catch(function(){return null}));
-          rows.push(translate('the '+w,'en|es').then(function(r){return {k:'noun',t:cleanEs(r.main)}}).catch(function(){return null}))}
-        return Promise.all(rows).then(function(rs){if(my!==seq)return;
-          var main=rs[0],extra=rs.slice(1).filter(Boolean);
-          $('d-es').innerHTML='<div class="des-main">'+esc(main.t)+'</div>'+
-            (extra.length?'<div class="des-alt">'+extra.map(function(r){return '<b>as a '+esc(r.k)+':</b> '+esc(r.t)}).join(' · ')+'</div>':'')})
-      }).catch(function(){if(my!==seq)return;$('d-es').innerHTML=NOTR});
+            $('d-es').innerHTML='<div class="des-main">'+esc(cleanEs(r.main))+'</div>'})}
+        // Single word: ask for the bare word plus one context query per part of speech,
+        // then trust what several queries agree on. Junk rarely shows up twice.
+        var qs=[{k:'',q:w}];
+        if(pos.indexOf('interjection')>-1)qs.push({k:'interjection',q:w.charAt(0).toUpperCase()+w.slice(1)+'!'});
+        if(pos.indexOf('verb')>-1)qs.push({k:'verb',q:'to '+w});
+        if(pos.indexOf('noun')>-1)qs.push({k:'noun',q:'the '+w});
+        return Promise.all(qs.map(function(x1){return fetchTr(x1.q,'en|es').then(function(r){return {k:x1.k,r:r}}).catch(function(){return null})}))
+        .then(function(rs){if(my!==seq)return;
+          rs=rs.filter(Boolean);if(!rs.length)throw new Error('quota');
+          var all={},perQ={},locals=[];
+          rs.forEach(function(x1,qi){var local={};locals.push(local);
+            x1.r.cands.forEach(function(c){var k=esKey(c.t,x1.k);
+              // skip empty, the English word echoed back, whole sentences, and
+              // "verb" answers that are really nouns ("to meeting" -> "la reunión")
+              if(!k||k===w||k.split(' ').length>3||/\d/.test(k))return;
+              if(x1.k==='verb'&&/^(el|la|los|las|un|una)\s/.test(k))return;
+              var a=all[k]||(all[k]={k:k,s:0,qs:{}});a.s+=c.w;a.qs[qi]=1;
+              var l=local[k]||(local[k]={s:0,c:0});l.s+=c.w;l.c++});
+          });
+          var list=Object.keys(all).map(function(k){var a=all[k];a.n=Object.keys(a.qs).length;return a});
+          list.sort(function(a,b){return b.n-a.n||b.s-a.s});
+          // best answer per part of speech; only trusted if it's repeated in its own
+          // query or also shows up in another query
+          var bestQ={};
+          rs.forEach(function(x1,qi){if(!x1.k)return;var local=locals[qi],b=null;
+            Object.keys(local).forEach(function(k){if(!b||local[k].s>local[b].s)b=k});
+            if(b)bestQ[x1.k]=b;
+            if(b&&(local[b].c>1||all[b].n>1))perQ[x1.k]=b});
+          var main=null;
+          if(list.length&&list[0].n>1)main=list[0].k;            // agreed on by 2+ queries
+          else if(bestQ.interjection)main=bestQ.interjection;    // hello -> hola
+          else if(bestQ[pos[0]])main=bestQ[pos[0]];              // main part of speech (run -> ejecutar, not "demanda")
+          else if(list.length)main=list[0].k;                    // adjectives etc.: best bare-word match
+          if(!main)throw new Error('none');
+          var extra=['verb','noun'].filter(function(k){return perQ[k]&&perQ[k]!==main})
+            .map(function(k){return '<b>as a '+k+':</b> '+esc(perQ[k])});
+          $('d-es').innerHTML='<div class="des-main">'+esc(main)+'</div>'+
+            (extra.length?'<div class="des-alt">'+extra.join(' · ')+'</div>':'')})
+      }).catch(function(e){if(my!==seq)return;
+        $('d-es').innerHTML=e&&e.message==='none'?'<span class="dnote">No reliable Spanish translation found. Try the links below.</span>':NOTR});
 
       Promise.all([dictP,synP]).then(function(res){
         if(my!==seq)return;
