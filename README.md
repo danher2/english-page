@@ -1,17 +1,27 @@
-# Frases en inglés por bloques (chunking)
+# English Phrases in Chunks — Work & Life
 
-Lista de frases en inglés para memorizar por bloques, para el trabajo y la vida diaria, con fórmulas para armar oraciones y práctica diaria de tiempos simples y perfectos.
+A list of English phrases to memorize as whole chunks, for work and daily life, with formulas for building sentences and daily practice of simple and perfect forms. Spanish is used only for the meanings.
 
-- `index.html`: la página que publica GitHub Pages. Es un solo archivo, sin dependencias.
-- `frases.md`: el mismo contenido en Markdown.
+Live page: https://danher2.github.io/english-page/
 
-## Modo práctica
+## Files
 
-En la página, los botones **Ocultar inglés** y **Ocultar español** tapan esa columna en todas las tablas. Toca una celda oculta para verla.
+- `frases.md`: the content (source of truth). Edit this file.
+- `build.py`: generates `index.html` from `frases.md`.
+- `index.html`: the page GitHub Pages serves. Don't edit it by hand.
 
-## Publicar con GitHub Pages
+## Updating the page
 
-1. Crea un repositorio nuevo y sube `index.html`, `frases.md` y este `README.md` a la rama `main`.
-2. En el repositorio, ve a **Settings → Pages**.
-3. En **Build and deployment**, elige **Deploy from a branch**, rama `main`, carpeta `/ (root)`, y guarda.
-4. En uno o dos minutos la página queda en `https://<tu-usuario>.github.io/<nombre-del-repo>/`.
+```
+python build.py
+git add . && git commit -m "Update phrases" && git push
+```
+
+GitHub Pages refreshes within a minute or two.
+
+## Page features
+
+- **Search** across English and Spanish (press `/` to focus it).
+- **Hide English / Hide Spanish** to quiz yourself; tap a hidden phrase to reveal it.
+- **Listen** to any phrase with the speaker button (uses your device's English voice).
+- Contents sidebar (a menu on mobile), dark mode, and a back-to-top button.

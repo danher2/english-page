@@ -1,39 +1,39 @@
-# Frases en inglés por bloques (chunking) — Trabajo y vida
+# English Phrases in Chunks — Work & Life
 
-Actualizado: 18 de noviembre de 2026
+Updated: November 18, 2026
 
-## Cómo usar esta lista
+## How to Use This List
 
-Cada frase es un bloque completo: apréndela entera, como si fuera una sola palabra, sin analizar la gramática. Donde veas \_\_\_ puedes meter lo que necesites (un nombre, una fecha, un tema).
+Each phrase is a complete chunk: learn it whole, as if it were a single word, without analyzing the grammar. Wherever you see \_\_\_ you can fill in whatever you need (a name, a date, a topic).
 
-1. Elige 5 a 10 frases al día, no más.
-2. Dilas en voz alta 5 veces cada una, con la entonación completa.
-3. Tapa la columna de inglés y trata de decirla viendo solo el español.
-4. Úsala ese mismo día: en un correo, en una junta o hablando solo.
-5. Repasa las de ayer antes de aprender nuevas (repetición espaciada: 1, 3, 7 y 14 días).
+1. Pick 5 to 10 phrases a day, no more.
+2. Say each one out loud 5 times, with the full intonation.
+3. Cover the English column and try to say the phrase looking only at the Spanish.
+4. Use it that same day: in an email, in a meeting, or talking to yourself.
+5. Review yesterday's phrases before learning new ones (spaced repetition: 1, 3, 7, and 14 days).
 
-Truco: empieza por las secciones de reuniones, correos y muletillas; son las que más se repiten en el trabajo.
+Tip: start with the Meetings, Emails, and Fillers sections; they're the ones you'll repeat most at work.
 
-## Fórmulas para armar oraciones
+## Formulas for Building Sentences
 
-Con estas fórmulas armas casi cualquier oración en inglés. La pieza clave es el **auxiliar** (do, did, have, will, would, could, should, must): con él haces preguntas, negativas y respuestas cortas.
+With these formulas you can build almost any sentence in English. The key piece is the **auxiliary** (do, did, have, will, would, could, should, must): you use it to make questions, negatives, and short answers.
 
-### 1. SVO — Sujeto + Verbo + Objeto
+### 1. SVO — Subject + Verb + Object
 
-Es el orden básico. En inglés casi nunca se mueve, y el sujeto nunca se omite (en español sí: "mandé el correo"; en inglés siempre "**I** sent the email").
+This is the basic order. In English it almost never moves, and the subject is never dropped (in Spanish you can say "mandé el correo"; in English it's always "**I** sent the email").
 
-| Sujeto | Verbo | Objeto |
+| Subject | Verb | Object |
 | --- | --- | --- |
 | I | send | the report. |
 | The client | approved | the budget. |
 | We | need | more time. |
-| It | is | important. *(nunca "Is important")* |
+| It | is | important. *(never "Is important")* |
 
-### 2. Las 5 W's + How — qué decir
+### 2. The 5 W's + How — What to Say
 
-No son un orden de palabras: son preguntas para que nunca te quedes sin qué decir. Cuando cuentes algo, respóndelas una por una y cada respuesta es una oración.
+They aren't a word order: they're questions so you never run out of things to say. When you tell a story, answer them one by one, and each answer is a sentence.
 
-| Pregunta | Qué busca | Ejemplo de respuesta |
+| Question | Meaning | Example answer |
 | --- | --- | --- |
 | Who? | Quién | **The sales team** had a meeting. |
 | What? | Qué | We talked about **the new prices**. |
@@ -42,9 +42,9 @@ No son un orden de palabras: son preguntas para que nunca te quedes sin qué dec
 | Why? | Por qué | We met **because sales dropped**. |
 | How? | Cómo | We decided **by voting**. |
 
-### 3. Afirmativa y negativa — S + A + V + O + P + T
+### 3. Affirmative and Negative — S + A + V + O + P + T
 
-**S**ujeto + **A**uxiliar (+ not) + **V**erbo + **O**bjeto + **P**lace (lugar) + **T**ime (tiempo). Es SVO con el auxiliar en medio, y con el lugar y el tiempo al final. El tiempo va al final o al principio, nunca en medio.
+**S**ubject + **A**uxiliary (+ not) + **V**erb + **O**bject + **P**lace + **T**ime. It's SVO with the auxiliary in the middle, and place and time at the end. Time goes at the end or at the beginning, never in the middle.
 
 | S | A (+ not) | V | O | P | T |
 | --- | --- | --- | --- | --- | --- |
@@ -53,71 +53,71 @@ No son un orden de palabras: son preguntas para que nunca te quedes sin qué dec
 | We | will | finish | the project | in Monterrey | next week. |
 | They | should | have checked | the numbers | — | before the meeting. |
 
-En el presente y el pasado simple afirmativos, el auxiliar está "escondido": I send / I sent. Aparece solo al negar o preguntar: I **don't** send / I **didn't** send.
+In the affirmative simple present and simple past, the auxiliary is "hidden": I send / I sent. It only appears when you make a negative or a question: I **don't** send / I **didn't** send.
 
-### 4. Preguntas — Q + A + S + V
+### 4. Questions — Q + A + S + V
 
-**Q**uestion word + **A**uxiliar + **S**ujeto + **V**erbo + resto? Aquí el auxiliar se pasa **adelante** del sujeto.
+**Q**uestion word + **A**uxiliary + **S**ubject + **V**erb + rest? Here the auxiliary moves **in front of** the subject.
 
-| Q | A | S | V | Resto |
+| Q | A | S | V | Rest |
 | --- | --- | --- | --- | --- |
 | Why | have | you | sent | the report? |
 | When | did | she | call? |  |
 | Where | will | we | meet | tomorrow? |
 | How | could | they | have missed | it? |
-| — | Did | she | call? | *(sí/no: sin Q)* |
+| — | Did | she | call? | *(yes/no: no Q)* |
 
-Excepción: cuando preguntas **por el sujeto** (Who / What hizo algo), no hay auxiliar ni cambio de orden: **Who sent** the report? / **What happened**?
+Exception: when you ask **about the subject** (who / what did something), there's no auxiliary and no change in order: **Who sent** the report? / **What happened**?
 
-### 5. Regla: ¿no hay auxiliar? Usa do / does / did
+### 5. Rule: No Auxiliary? Use do / does / did
 
-Si la frase no tiene auxiliar visible, para preguntar o negar agregas uno, y el verbo regresa a su forma base.
+If the sentence has no visible auxiliary, you add one to make a question or a negative, and the verb goes back to its base form.
 
-| Afirmativa | Pregunta | Negativa |
+| Affirmative | Question | Negative |
 | --- | --- | --- |
 | I work here. | Do I work here? | I don't work here. |
 | He works here. | Does he work here? | He doesn't work here. |
 | You sent it. | Did you send it? | You didn't send it. |
 
-El auxiliar "se roba" la -s y el pasado: works → does he **work**; sent → did you **send**.
+The auxiliary "steals" the -s and the past tense: works → does he **work**; sent → did you **send**.
 
-### 6. Regla: el auxiliar decide la forma del verbo
+### 6. Rule: The Auxiliary Decides the Verb Form
 
-| Si el auxiliar es... | El verbo va en... | Ejemplo |
+| If the auxiliary is... | The verb is in... | Example |
 | --- | --- | --- |
-| do, does, did | forma base | Did you **send** it? |
-| will, would, can, could, should, must, might | forma base | We should **send** it. |
-| have, has, had | participio | I have **sent** it. |
-| modal + have | participio | I should have **sent** it. |
+| do, does, did | base form | Did you **send** it? |
+| will, would, can, could, should, must, might | base form | We should **send** it. |
+| have, has, had | past participle | I have **sent** it. |
+| modal + have | past participle | I should have **sent** it. |
 | am, is, are, was, were | -ing | I am **sending** it. |
 
-### 7. Respuestas cortas — Yes/No + S + A
+### 7. Short Answers — Yes/No + S + A
 
-No repites toda la frase: solo el sujeto y el mismo auxiliar de la pregunta.
+Don't repeat the whole sentence: just the subject and the same auxiliary from the question.
 
-| Pregunta | Sí | No |
+| Question | Yes | No |
 | --- | --- | --- |
 | Do you work here? | Yes, I do. | No, I don't. |
 | Have you sent it? | Yes, I have. | No, I haven't. |
 | Will he call? | Yes, he will. | No, he won't. |
 | Should we wait? | Yes, we should. | No, we shouldn't. |
 
-### 8. Preguntas dentro de una frase — orden normal
+### 8. Questions Inside a Sentence — Normal Order
 
-Cuando la pregunta va dentro de otra frase (Do you know..., I don't know..., Tell me...), el orden regresa a S + V y se quita el do/did.
+When the question goes inside another sentence (Do you know..., I don't know..., Tell me...), the order goes back to S + V and do/did is dropped.
 
-| Pregunta directa | Dentro de una frase |
+| Direct question | Inside a sentence |
 | --- | --- |
 | Where is the office? | Do you know where **the office is**? |
 | Why did he leave? | I don't know why **he left**. |
 | How do I build sentences? | I want to know how **I build** sentences. |
 | When will they arrive? | Can you tell me when **they will arrive**? |
 
-## Reuniones
+## Meetings
 
-Abrir, participar, interrumpir y cerrar una junta sin pensar.
+Open, join in, interrupt, and close a meeting without thinking.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | Let's get started. | Empecemos. |
 | Thanks everyone for joining. | Gracias a todos por conectarse / venir. |
@@ -160,11 +160,11 @@ Abrir, participar, interrumpir y cerrar una junta sin pensar.
 | I have a hard stop at \_\_\_. | Tengo que irme sí o sí a las \_\_\_. |
 | I need to drop off in five minutes. | Me tengo que salir en cinco minutos. |
 
-## Correos y mensajes
+## Emails and Messages
 
-Bloques para abrir, armar el cuerpo y cerrar correos o mensajes de Slack/Teams.
+Chunks to open, build the body of, and close emails or Slack/Teams messages.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | Hi \_\_\_, I hope you're doing well. | Hola \_\_\_, espero que estés bien. |
 | I hope you had a great weekend. | Espero que hayas tenido un gran fin de semana. |
@@ -212,11 +212,11 @@ Bloques para abrir, armar el cuerpo y cerrar correos o mensajes de Slack/Teams.
 | Do you have a minute to chat? | ¿Tienes un minuto para platicar? |
 | Can we hop on a quick call? | ¿Nos echamos una llamada rápida? |
 
-## Opinar, estar de acuerdo y en desacuerdo
+## Opinions, Agreeing and Disagreeing
 
-Para dar tu opinión y no sonar ni tajante ni inseguro.
+To give your opinion without sounding too blunt or too unsure.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | In my opinion, \_\_\_. | En mi opinión, \_\_\_. |
 | I think we should \_\_\_. | Creo que deberíamos \_\_\_. |
@@ -256,11 +256,11 @@ Para dar tu opinión y no sonar ni tajante ni inseguro.
 | The pros outweigh the cons. | Las ventajas pesan más que las desventajas. |
 | The bottom line is \_\_\_. | Lo importante al final es \_\_\_. |
 
-## Pedir aclaraciones y cuando no entiendes
+## Asking for Clarification
 
-Las más importantes para no quedarte callado cuando no le entendiste a alguien.
+The most important ones, so you don't go silent when you didn't understand someone.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | Sorry, could you repeat that? | Perdón, ¿podrías repetir eso? |
 | Sorry, I didn't catch that. | Perdón, no alcancé a entender. |
@@ -292,11 +292,11 @@ Las más importantes para no quedarte callado cuando no le entendiste a alguien.
 | How do you say \_\_\_ in English? | ¿Cómo se dice \_\_\_ en inglés? |
 | What's the word for \_\_\_? | ¿Cuál es la palabra para \_\_\_? |
 
-## Avances, estatus, fechas límite y prioridades
+## Progress, Status, Deadlines and Priorities
 
-Para dar updates en dailies, juntas de seguimiento o con tu jefe.
+For giving updates in dailies, follow-up meetings, or to your boss.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | Here's a quick update on \_\_\_. | Aquí va un update rápido sobre \_\_\_. |
 | Yesterday I worked on \_\_\_. | Ayer trabajé en \_\_\_. |
@@ -334,11 +334,11 @@ Para dar updates en dailies, juntas de seguimiento o con tu jefe.
 | Let's touch base on Friday. | Revisémoslo / platiquemos el viernes. |
 | Let's circle back to this next week. | Retomemos esto la próxima semana. |
 
-## Problemas, malas noticias, disculpas y soluciones
+## Problems, Bad News, Apologies and Solutions
 
-Para reportar algo que salió mal y proponer cómo arreglarlo.
+To report something that went wrong and propose how to fix it.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | We have an issue with \_\_\_. | Tenemos un problema con \_\_\_. |
 | I'm afraid \_\_\_. | Me temo que \_\_\_. |
@@ -374,11 +374,11 @@ Para reportar algo que salió mal y proponer cómo arreglarlo.
 | That's out of my hands. | Eso no depende de mí. |
 | I'll escalate this to \_\_\_. | Voy a escalar esto con \_\_\_. |
 
-## Pedir favores, delegar y ofrecer ayuda
+## Asking for Favors, Delegating and Offering Help
 
-Del más directo al más cortés; en inglés de trabajo casi siempre conviene el cortés.
+From most direct to most polite; in workplace English, polite is almost always the better choice.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | Could you help me with \_\_\_? | ¿Me podrías ayudar con \_\_\_? |
 | Would you mind \_\_\_ing? | ¿Te molestaría \_\_\_? |
@@ -407,11 +407,11 @@ Del más directo al más cortés; en inglés de trabajo casi siempre conviene el
 | I really appreciate it. | Te lo agradezco mucho. |
 | That was a huge help. | Fue de gran ayuda. |
 
-## Presentaciones y exponer ideas
+## Presentations and Pitching Ideas
 
-Un esqueleto completo: si te aprendes estas en orden, ya tienes la estructura de cualquier presentación.
+A complete skeleton: learn these in order and you have the structure for any presentation.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | Good morning, everyone. Thanks for being here. | Buenos días a todos. Gracias por estar aquí. |
 | Today I'm going to talk about \_\_\_. | Hoy voy a hablar sobre \_\_\_. |
@@ -446,11 +446,11 @@ Un esqueleto completo: si te aprendes estas en orden, ya tienes la estructura de
 | Let me share my screen. | Déjenme compartir mi pantalla. |
 | Bear with me a second. | Denme un segundo. |
 
-## Llamadas y videollamadas
+## Calls and Video Calls
 
-Incluye las fallas técnicas, que pasan en todas las juntas de Zoom o Teams.
+Includes technical problems, which happen in every Zoom or Teams meeting.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | Hi, this is \_\_\_ from \_\_\_. | Hola, habla \_\_\_ de \_\_\_. |
 | Is this a good time to talk? | ¿Es buen momento para hablar? |
@@ -480,11 +480,11 @@ Incluye las fallas técnicas, que pasan en todas las juntas de Zoom o Teams.
 | Talk to you soon. / Talk soon. | Hablamos pronto. |
 | Have a good one! | ¡Que te vaya bien! |
 
-## Clientes, negociación y ventas
+## Clients, Negotiation and Sales
 
-Para tratar con clientes, proveedores y cerrar acuerdos.
+For dealing with clients and suppliers and closing deals.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | How can I help you today? | ¿En qué te puedo ayudar hoy? |
 | What are you looking for exactly? | ¿Qué estás buscando exactamente? |
@@ -519,11 +519,11 @@ Para tratar con clientes, proveedores y cerrar acuerdos.
 | We value your business. | Valoramos mucho trabajar con ustedes. |
 | It's a pleasure doing business with you. | Es un placer hacer negocios con ustedes. |
 
-## Dar y recibir feedback
+## Giving and Receiving Feedback
 
-Para evaluaciones, revisiones de trabajo y one-on-ones.
+For performance reviews, work reviews, and one-on-ones.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | Great job on \_\_\_. | Excelente trabajo con \_\_\_. |
 | I really liked how you \_\_\_. | Me gustó mucho cómo \_\_\_. |
@@ -550,11 +550,11 @@ Para evaluaciones, revisiones de trabajo y one-on-ones.
 | I'd like to take on more responsibility. | Me gustaría asumir más responsabilidades. |
 | I'd like to discuss my career path. | Me gustaría hablar de mi plan de carrera. |
 
-## Small talk en el trabajo y presentarte
+## Small Talk and Introducing Yourself
 
-Los primeros cinco minutos de cualquier junta, el café o un evento de networking.
+The first five minutes of any meeting, a coffee break, or a networking event.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | Nice to meet you. / Great to meet you. | Mucho gusto. |
 | Nice to meet you in person. | Qué gusto conocerte en persona. |
@@ -591,11 +591,11 @@ Los primeros cinco minutos de cualquier junta, el café o un evento de networkin
 | Have a great weekend! | ¡Que tengas un gran fin de semana! |
 | Welcome to the team! | ¡Bienvenido al equipo! |
 
-## Entrevistas y carrera
+## Interviews and Career
 
-Para entrevistas de trabajo, hablar de tu experiencia y pedir un aumento.
+For job interviews, talking about your experience, and asking for a raise.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | Thank you for having me. | Gracias por recibirme. |
 | I have \_\_\_ years of experience in \_\_\_. | Tengo \_\_\_ años de experiencia en \_\_\_. |
@@ -627,11 +627,11 @@ Para entrevistas de trabajo, hablar de tu experiencia y pedir un aumento.
 | My last day will be \_\_\_. | Mi último día será el \_\_\_. |
 | I'll make sure to hand everything over. | Me aseguraré de entregar todo. |
 
-## Muletillas y conectores para ganar tiempo
+## Fillers and Connectors to Buy Time
 
-Estas te dan 2 o 3 segundos para pensar sin quedarte callado, y hacen que suenes más natural.
+These give you 2 or 3 seconds to think without going silent, and they make you sound more natural.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | Let me think... | Déjame pensar... |
 | Well, let me see... | Bueno, a ver... |
@@ -669,13 +669,13 @@ Estas te dan 2 o 3 segundos para pensar sin quedarte callado, y hacen que suenes
 | Where was I? | ¿En qué iba? |
 | It's on the tip of my tongue. | Lo tengo en la punta de la lengua. |
 
-## Vida diaria: restaurante, viaje, compras, salud y social
+## Daily Life: Restaurants, Travel, Shopping, Health and Social
 
-Lo que más vas a usar fuera del trabajo, sobre todo en viajes de negocios.
+What you'll use most outside of work, especially on business trips.
 
-### Restaurante y café
+### Restaurants and Cafés
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | A table for two, please. | Una mesa para dos, por favor. |
 | I have a reservation under \_\_\_. | Tengo una reservación a nombre de \_\_\_. |
@@ -692,9 +692,9 @@ Lo que más vas a usar fuera del trabajo, sobre todo en viajes de negocios.
 | It's on me. / My treat. | Yo invito. |
 | Keep the change. | Quédese con el cambio. |
 
-### Viaje y hotel
+### Travel and Hotels
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | I'd like to check in. | Quiero hacer el check-in. |
 | I have a booking under \_\_\_. | Tengo una reservación a nombre de \_\_\_. |
@@ -714,9 +714,9 @@ Lo que más vas a usar fuera del trabajo, sobre todo en viajes de negocios.
 | Window or aisle seat? | ¿Ventana o pasillo? |
 | Where's the gate for \_\_\_? | ¿Dónde está la sala para \_\_\_? |
 
-### Compras y servicios
+### Shopping and Services
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | I'm just looking, thanks. | Solo estoy viendo, gracias. |
 | How much is this? | ¿Cuánto cuesta esto? |
@@ -729,9 +729,9 @@ Lo que más vas a usar fuera del trabajo, sobre todo en viajes de negocios.
 | Could you help me with something? | ¿Me podría ayudar con algo? |
 | It's not working. | No funciona. |
 
-### Salud y emergencias
+### Health and Emergencies
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | I don't feel well. | No me siento bien. |
 | I have a headache / stomachache. | Me duele la cabeza / el estómago. |
@@ -742,9 +742,9 @@ Lo que más vas a usar fuera del trabajo, sobre todo en viajes de negocios.
 | I'm calling in sick today. | Hoy me reporto enfermo. |
 | I need help. / Please call an ambulance. | Necesito ayuda. / Llame a una ambulancia, por favor. |
 
-### Social y amigos
+### Social Life and Friends
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | What are you up to? | ¿Qué andas haciendo? |
 | Long time no see! | ¡Cuánto tiempo sin verte! |
@@ -763,11 +763,11 @@ Lo que más vas a usar fuera del trabajo, sobre todo en viajes de negocios.
 | Happy birthday! | ¡Feliz cumpleaños! |
 | I'm sorry for your loss. | Lamento tu pérdida. |
 
-## Reacciones y emociones
+## Reactions and Emotions
 
-Respuestas cortas para reaccionar rápido en cualquier conversación.
+Short replies to react quickly in any conversation.
 
-| Inglés (chunk) | Español |
+| English | Spanish |
 | --- | --- |
 | That's great news! | ¡Qué buena noticia! |
 | Good for you! | ¡Qué bien por ti! |
@@ -800,37 +800,37 @@ Respuestas cortas para reaccionar rápido en cualquier conversación.
 | Good luck! / Fingers crossed! | ¡Suerte! / ¡Cruzo los dedos! |
 | You've got this. | Tú puedes. |
 
-## Práctica diaria: forma simple y forma perfecta
+## Daily Practice: Simple and Perfect Forms
 
-Sigue el mismo orden de tu libro: cada día trabajas un molde en dos versiones, la simple (I do) y la perfecta (I have done). La perfecta siempre es igual: **auxiliar + have/had + participio** (done, gone, sent, finished).
+This follows the same order as your book: each day you work on one pattern in two versions, the simple (I do) and the perfect (I have done). The perfect is always built the same way: **auxiliary + have/had + past participle** (done, gone, sent, finished).
 
-Rutina de 15 minutos con el molde del día:
+15-minute routine with the pattern of the day:
 
-1. **Escucha y repite (3 min).** Lee cada par en voz alta 3 veces, completo, con ritmo. Si puedes, grábate y escúchate.
-2. **Cambia de forma (4 min).** Tapa la columna del perfecto, di la simple y cámbiala al perfecto sin pensar. Luego al revés.
-3. **Hazlo tuyo (5 min).** Di 5 frases sobre tu propio trabajo con el molde del día. Usa tus 5 W's como gatillo: Who did it? What happened? When? Where? Why?
-4. **Úsalo hoy (3 min).** Mete una frase del día en un correo, en una junta o en un mensaje real.
+1. **Listen and repeat (3 min).** Read each pair out loud 3 times, in full, with rhythm. If you can, record yourself and listen back.
+2. **Switch forms (4 min).** Cover the perfect column, say the simple form and switch it to the perfect without thinking. Then the other way around.
+3. **Make it yours (5 min).** Say 5 sentences about your own work using the pattern of the day. Use the 5 W's as a trigger: Who did it? What happened? When? Where? Why?
+4. **Use it today (3 min).** Put one phrase of the day into a real email, meeting, or message.
 
-En voz rápida, *have* casi desaparece: should have → *shoulda*, could have → *coulda*, would have → *woulda*, must have → *musta*, will have → *will'v*. Imita ese sonido; así suena natural.
+In fast speech, *have* almost disappears: should have → *shoulda*, could have → *coulda*, would have → *woulda*, must have → *musta*, will have → *will'v*. Imitate that sound; that's how it sounds natural.
 
-**Correcciones a tu libro.** Dos ejemplos traen errores; apréndete la versión correcta:
+**Corrections to your book.** Two examples have mistakes; learn the correct version:
 
 - ~~I will have eat, before go out~~ → **I will have eaten before going out.**
 - ~~I have brought you a gift if I had known today is your birthday~~ → **I would have brought you a gift if I had known it was your birthday.**
 
-## Frases por día de la semana
+## Phrases by Day of the Week
 
-Cada fila es un par: misma idea en forma simple y en forma perfecta. Apréndete las dos juntas.
+Each row is a pair: the same idea in the simple form and in the perfect form. Learn both together.
 
-**Cómo voltear cualquier frase.** Todas las frases giran alrededor de una palabrita: el auxiliar (do, did, have, had, will, would, could, should, must). Para preguntar, el auxiliar se pasa adelante del sujeto. Para negar, se le pega *not* (don't, haven't, won't, wouldn't...). Las respuestas cortas repiten solo el auxiliar: *Yes, I have. / No, I haven't.*
+**How to flip any sentence.** Every sentence turns around one little word: the auxiliary (do, did, have, had, will, would, could, should, must). To ask a question, the auxiliary moves in front of the subject. To make it negative, add *not* (don't, haven't, won't, wouldn't...). Short answers repeat only the auxiliary: *Yes, I have. / No, I haven't.*
 
-Cada día trae un **ejercicio completo de 8 formas** con una frase. Házlo en voz alta, de corrido, sin leer. Cuando te salga solo, toma cualquier otra frase del día y pásala por las mismas 8 formas, sin escribirla.
+Each day includes a **full 8-form drill** with one sentence. Do it out loud, all the way through, without reading. Once it comes naturally, take any other phrase of the day and run it through the same 8 forms, without writing it down.
 
-### Lunes — I do / I have done
+### Monday — I do / I have done
 
-Simple = hábito o algo que pasa ahora. Perfecto = algo que ya pasó y todavía importa hoy.
+Simple = a habit or something that happens now. Perfect = something that already happened and still matters today.
 
-| Simple | Perfecto | Español |
+| Simple | Perfect | Spanish |
 | --- | --- | --- |
 | I work in sales. | I have worked in sales for five years. | Trabajo en ventas. / Llevo cinco años en ventas. |
 | I send the report every Friday. | I have already sent the report. | Mando el reporte cada viernes. / Ya mandé el reporte. |
@@ -843,26 +843,26 @@ Simple = hábito o algo que pasa ahora. Perfecto = algo que ya pasó y todavía 
 | Does it work? | Has it ever worked? | ¿Funciona? / ¿Alguna vez ha funcionado? |
 | I don't understand. | I have never seen this before. | No entiendo. / Nunca había visto esto. |
 
-**Ejercicio completo — send the report** (mandar el reporte)
+**Full drill — send the report** (mandar el reporte)
 
-| Forma | Simple | Perfecto |
+| Form | Simple | Perfect |
 | --- | --- | --- |
-| Afirmativa | I send the report. | I have sent the report. |
-| Negativa | I don't send the report. | I haven't sent the report. |
-| Pregunta | Do I send the report? | Have I sent the report? |
-| Respuesta sí | Yes, I do. | Yes, I have. |
-| Respuesta no | No, I don't. | No, I haven't. |
-| Pregunta negativa | Don't I send the report? | Haven't I sent the report? |
+| Affirmative | I send the report. | I have sent the report. |
+| Negative | I don't send the report. | I haven't sent the report. |
+| Question | Do I send the report? | Have I sent the report? |
+| Short answer (yes) | Yes, I do. | Yes, I have. |
+| Short answer (no) | No, I don't. | No, I haven't. |
+| Negative question | Don't I send the report? | Haven't I sent the report? |
 | Why...? | Why do I send the report? | Why have I sent the report? |
 | Why... not? | Why don't I send the report? | Why haven't I sent the report? |
 
-Con he / she / it cambia a *does / has*: He sends → Does he send? → He doesn't send. / He has sent → Has he sent? → He hasn't sent.
+With he / she / it it changes to *does / has*: He sends → Does he send? → He doesn't send. / He has sent → Has he sent? → He hasn't sent.
 
-### Martes — You did / You had done
+### Tuesday — You did / You had done
 
-Simple = algo terminado en el pasado. Perfecto = algo que pasó antes de otra cosa del pasado.
+Simple = something finished in the past. Perfect = something that happened before something else in the past.
 
-| Simple | Perfecto | Español |
+| Simple | Perfect | Spanish |
 | --- | --- | --- |
 | You sent the email. | You had already sent the email when I called. | Mandaste el correo. / Ya habías mandado el correo cuando te llamé. |
 | The meeting started at nine. | The meeting had started when I arrived. | La junta empezó a las nueve. / La junta ya había empezado cuando llegué. |
@@ -873,26 +873,26 @@ Simple = algo terminado en el pasado. Perfecto = algo que pasó antes de otra co
 | She left early. | She had left by the time I got there. | Se fue temprano. / Ya se había ido cuando llegué. |
 | We worked together. | We had worked together before. | Trabajamos juntos. / Ya habíamos trabajado juntos. |
 
-**Ejercicio completo — send the email** (mandar el correo)
+**Full drill — send the email** (mandar el correo)
 
-| Forma | Simple | Perfecto |
+| Form | Simple | Perfect |
 | --- | --- | --- |
-| Afirmativa | You sent the email. | You had sent the email. |
-| Negativa | You didn't send the email. | You hadn't sent the email. |
-| Pregunta | Did you send the email? | Had you sent the email? |
-| Respuesta sí | Yes, I did. | Yes, I had. |
-| Respuesta no | No, I didn't. | No, I hadn't. |
-| Pregunta negativa | Didn't you send the email? | Hadn't you sent the email? |
+| Affirmative | You sent the email. | You had sent the email. |
+| Negative | You didn't send the email. | You hadn't sent the email. |
+| Question | Did you send the email? | Had you sent the email? |
+| Short answer (yes) | Yes, I did. | Yes, I had. |
+| Short answer (no) | No, I didn't. | No, I hadn't. |
+| Negative question | Didn't you send the email? | Hadn't you sent the email? |
 | Why...? | Why did you send the email? | Why had you sent the email? |
 | Why... not? | Why didn't you send the email? | Why hadn't you sent the email? |
 
-Ojo: con *did* el verbo regresa a su forma base: You **sent** → Did you **send**? (nunca "did you sent").
+Careful: with *did* the verb goes back to its base form: You **sent** → Did you **send**? (never "did you sent").
 
-### Miércoles — He will / He will have done
+### Wednesday — He will / He will have done
 
-Simple = algo que va a pasar. Perfecto = algo que ya va a estar terminado antes de un momento del futuro.
+Simple = something that is going to happen. Perfect = something that will already be finished before a point in the future.
 
-| Simple | Perfecto | Español |
+| Simple | Perfect | Spanish |
 | --- | --- | --- |
 | He will send it tomorrow. | He will have sent it by tomorrow. | Lo manda mañana. / Para mañana ya lo habrá mandado. |
 | I'll finish the report. | I'll have finished the report by noon. | Termino el reporte. / Para el mediodía ya habré terminado el reporte. |
@@ -902,26 +902,26 @@ Simple = algo que va a pasar. Perfecto = algo que ya va a estar terminado antes 
 | Will you be ready? | Will you have finished by Friday? | ¿Vas a estar listo? / ¿Ya habrás terminado para el viernes? |
 | I won't forget. | By next year, I'll have worked here for ten years. | No se me olvida. / El año que viene cumplo diez años aquí. |
 
-**Ejercicio completo — call the client** (llamar al cliente)
+**Full drill — call the client** (llamar al cliente)
 
-| Forma | Simple | Perfecto |
+| Form | Simple | Perfect |
 | --- | --- | --- |
-| Afirmativa | He will call the client. | He will have called the client by noon. |
-| Negativa | He won't call the client. | He won't have called the client by noon. |
-| Pregunta | Will he call the client? | Will he have called the client by noon? |
-| Respuesta sí | Yes, he will. | Yes, he will have. |
-| Respuesta no | No, he won't. | No, he won't have. |
-| Pregunta negativa | Won't he call the client? | Won't he have called the client by noon? |
+| Affirmative | He will call the client. | He will have called the client by noon. |
+| Negative | He won't call the client. | He won't have called the client by noon. |
+| Question | Will he call the client? | Will he have called the client by noon? |
+| Short answer (yes) | Yes, he will. | Yes, he will have. |
+| Short answer (no) | No, he won't. | No, he won't have. |
+| Negative question | Won't he call the client? | Won't he have called the client by noon? |
 | Why...? | Why will he call the client? | Why will he have called the client by noon? |
 | Why... not? | Why won't he call the client? | Why won't he have called the client by noon? |
 
-*won't* = will not. En el perfecto casi siempre va con *by* + momento: by noon, by Friday, by the time you arrive.
+*won't* = will not. The perfect almost always goes with *by* + a point in time: by noon, by Friday, by the time you arrive.
 
-### Jueves — She would / She would have done
+### Thursday — She would / She would have done
 
-Simple = algo hipotético ahora (haría). Perfecto = algo que pudo pasar y no pasó (habría hecho).
+Simple = something hypothetical now (haría). Perfect = something that could have happened but didn't (habría hecho).
 
-| Simple | Perfecto | Español |
+| Simple | Perfect | Spanish |
 | --- | --- | --- |
 | She would help you. | She would have helped you. | Ella te ayudaría. / Ella te habría ayudado. |
 | I would call him. | I would have called him, but I was busy. | Yo le llamaría. / Le habría llamado, pero estaba ocupado. |
@@ -931,24 +931,24 @@ Simple = algo hipotético ahora (haría). Perfecto = algo que pudo pasar y no pa
 | Would you accept the offer? | Would you have accepted the offer? | ¿Aceptarías la oferta? / ¿Habrías aceptado la oferta? |
 | It would be great. | It would have been great. | Sería genial. / Habría sido genial. |
 
-**Ejercicio completo — accept the offer** (aceptar la oferta)
+**Full drill — accept the offer** (aceptar la oferta)
 
-| Forma | Simple | Perfecto |
+| Form | Simple | Perfect |
 | --- | --- | --- |
-| Afirmativa | She would accept the offer. | She would have accepted the offer. |
-| Negativa | She wouldn't accept the offer. | She wouldn't have accepted the offer. |
-| Pregunta | Would she accept the offer? | Would she have accepted the offer? |
-| Respuesta sí | Yes, she would. | Yes, she would have. |
-| Respuesta no | No, she wouldn't. | No, she wouldn't have. |
-| Pregunta negativa | Wouldn't she accept the offer? | Wouldn't she have accepted the offer? |
+| Affirmative | She would accept the offer. | She would have accepted the offer. |
+| Negative | She wouldn't accept the offer. | She wouldn't have accepted the offer. |
+| Question | Would she accept the offer? | Would she have accepted the offer? |
+| Short answer (yes) | Yes, she would. | Yes, she would have. |
+| Short answer (no) | No, she wouldn't. | No, she wouldn't have. |
+| Negative question | Wouldn't she accept the offer? | Wouldn't she have accepted the offer? |
 | Why...? | Why would she accept the offer? | Why would she have accepted the offer? |
 | Why... not? | Why wouldn't she accept the offer? | Why wouldn't she have accepted the offer? |
 
-### Viernes — It could / It could have done
+### Friday — It could / It could have done
 
-Simple = posibilidad ahora. Perfecto = posibilidad del pasado que no se aprovechó, o algo que tal vez pasó.
+Simple = a possibility now. Perfect = a past possibility that didn't happen, or something that maybe happened.
 
-| Simple | Perfecto | Español |
+| Simple | Perfect | Spanish |
 | --- | --- | --- |
 | It could be a problem. | It could have been a problem. | Podría ser un problema. / Pudo haber sido un problema. |
 | We could finish today. | We could have finished yesterday. | Podríamos terminar hoy. / Pudimos haber terminado ayer. |
@@ -958,24 +958,24 @@ Simple = posibilidad ahora. Perfecto = posibilidad del pasado que no se aprovech
 | Could you send it? | Could you have sent it earlier? | ¿Lo podrías mandar? / ¿Lo pudiste haber mandado antes? |
 | He couldn't come. | He couldn't have known. | No pudo venir. / No pudo haberlo sabido. |
 
-**Ejercicio completo — be a problem** (ser un problema)
+**Full drill — be a problem** (ser un problema)
 
-| Forma | Simple | Perfecto |
+| Form | Simple | Perfect |
 | --- | --- | --- |
-| Afirmativa | It could be a problem. | It could have been a problem. |
-| Negativa | It couldn't be a problem. | It couldn't have been a problem. |
-| Pregunta | Could it be a problem? | Could it have been a problem? |
-| Respuesta sí | Yes, it could. | Yes, it could have. |
-| Respuesta no | No, it couldn't. | No, it couldn't have. |
-| Pregunta negativa | Couldn't it be a problem? | Couldn't it have been a problem? |
+| Affirmative | It could be a problem. | It could have been a problem. |
+| Negative | It couldn't be a problem. | It couldn't have been a problem. |
+| Question | Could it be a problem? | Could it have been a problem? |
+| Short answer (yes) | Yes, it could. | Yes, it could have. |
+| Short answer (no) | No, it couldn't. | No, it couldn't have. |
+| Negative question | Couldn't it be a problem? | Couldn't it have been a problem? |
 | Why...? | Why could it be a problem? | Why could it have been a problem? |
 | Why... not? | Why couldn't it be a problem? | Why couldn't it have been a problem? |
 
-### Sábado — We should / We should have done
+### Saturday — We should / We should have done
 
-Simple = consejo o lo correcto ahora. Perfecto = lo que era correcto hacer y no se hizo (arrepentimiento).
+Simple = advice or the right thing to do now. Perfect = what was right to do but wasn't done (regret).
 
-| Simple | Perfecto | Español |
+| Simple | Perfect | Spanish |
 | --- | --- | --- |
 | We should talk. | We should have talked earlier. | Deberíamos hablar. / Debíamos haber hablado antes. |
 | You should check the numbers. | You should have checked the numbers. | Deberías revisar los números. / Debiste haber revisado los números. |
@@ -985,24 +985,24 @@ Simple = consejo o lo correcto ahora. Perfecto = lo que era correcto hacer y no 
 | Should I tell him? | Should I have told him? | ¿Le digo? / ¿Le debí haber dicho? |
 | I should know this. | I should have known. | Debería saber esto. / Lo debí haber sabido. |
 
-**Ejercicio completo — check the numbers** (revisar los números)
+**Full drill — check the numbers** (revisar los números)
 
-| Forma | Simple | Perfecto |
+| Form | Simple | Perfect |
 | --- | --- | --- |
-| Afirmativa | We should check the numbers. | We should have checked the numbers. |
-| Negativa | We shouldn't check the numbers. | We shouldn't have checked the numbers. |
-| Pregunta | Should we check the numbers? | Should we have checked the numbers? |
-| Respuesta sí | Yes, we should. | Yes, we should have. |
-| Respuesta no | No, we shouldn't. | No, we shouldn't have. |
-| Pregunta negativa | Shouldn't we check the numbers? | Shouldn't we have checked the numbers? |
+| Affirmative | We should check the numbers. | We should have checked the numbers. |
+| Negative | We shouldn't check the numbers. | We shouldn't have checked the numbers. |
+| Question | Should we check the numbers? | Should we have checked the numbers? |
+| Short answer (yes) | Yes, we should. | Yes, we should have. |
+| Short answer (no) | No, we shouldn't. | No, we shouldn't have. |
+| Negative question | Shouldn't we check the numbers? | Shouldn't we have checked the numbers? |
 | Why...? | Why should we check the numbers? | Why should we have checked the numbers? |
 | Why... not? | Why shouldn't we check the numbers? | Why shouldn't we have checked the numbers? |
 
-### Domingo — They must / They must have done
+### Sunday — They must / They must have done
 
-Simple = obligación o deducción segura ahora. Perfecto = deducción segura sobre algo que ya pasó.
+Simple = an obligation or a confident guess now. Perfect = a confident guess about something that already happened.
 
-| Simple | Perfecto | Español |
+| Simple | Perfect | Spanish |
 | --- | --- | --- |
 | They must be busy. | They must have been busy. | Deben estar ocupados. / Deben haber estado ocupados. |
 | He must know. | He must have forgotten about the meeting. | Debe saber. / Seguro se le olvidó la junta. |
@@ -1012,17 +1012,17 @@ Simple = obligación o deducción segura ahora. Perfecto = deducción segura sob
 | We must follow the policy. | I must have missed your email. | Debemos seguir la política. / Se me debe haber pasado tu correo. |
 | The ground is wet; it must be raining. | The ground is wet; it must have rained. | El piso está mojado; debe estar lloviendo. / Debe haber llovido. |
 
-**Ejercicio completo — be busy** (estar ocupado)
+**Full drill — be busy** (estar ocupado)
 
-| Forma | Simple | Perfecto |
+| Form | Simple | Perfect |
 | --- | --- | --- |
-| Afirmativa | They must be busy. | They must have been busy. |
-| Negativa | They can't be busy. | They can't have been busy. |
-| Pregunta | Could they be busy? | Could they have been busy? |
-| Respuesta sí | Yes, they must be. | Yes, they must have been. |
-| Respuesta no | No, they can't be. | No, they can't have been. |
-| Pregunta negativa | Couldn't they be busy? | Couldn't they have been busy? |
+| Affirmative | They must be busy. | They must have been busy. |
+| Negative | They can't be busy. | They can't have been busy. |
+| Question | Could they be busy? | Could they have been busy? |
+| Short answer (yes) | Yes, they must be. | Yes, they must have been. |
+| Short answer (no) | No, they can't be. | No, they can't have been. |
+| Negative question | Couldn't they be busy? | Couldn't they have been busy? |
 | Why...? | Why must they be busy? | Why must they have been busy? |
 | Why... not? | Why can't they be busy? | Why can't they have been busy? |
 
-*Must* es el único raro: en la vida real casi nadie dice "mustn't" ni "Must they...?" para suponer algo. Lo natural es negar con *can't* (no puede ser) y preguntar con *could*. Para obligación, pregunta con *have to*: Do they have to work today? / Did they have to work late?
+*Must* is the odd one: in real life almost nobody says "mustn't" or "Must they...?" to make a guess. The natural way is to make it negative with *can't* (no puede ser) and to ask with *could*. For obligation, ask with *have to*: Do they have to work today? / Did they have to work late?
